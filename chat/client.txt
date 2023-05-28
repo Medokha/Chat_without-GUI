@@ -1,0 +1,11 @@
+from socket import *
+s = socket (AF_INET, SOCK_STREAM)
+host = "127.0.0.1"
+port = 7002
+s. connect ((host, port))
+while True:
+text_input = input ("client : ")
+if text_input == 'Q':
+break
+s.send (text_input.encode ('utf-8*))
+s.close()
